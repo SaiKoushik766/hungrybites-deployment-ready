@@ -12,7 +12,7 @@ const Home = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-darkBg/60 via-darkBg/80 to-darkBg z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+            src="https://i.pinimg.com/originals/52/ff/40/52ff401df7f40fac0478f3dba0dace93.jpg" 
             alt="Restaurant Header" 
             className="w-full h-full object-cover"
           />
@@ -48,41 +48,6 @@ const Home = () => {
               <FaArrowRight />
             </Link>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Featured Section */}
-      <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Featured <span className="text-primaryOrange">Specials</span></h2>
-          <p className="text-gray-400">Hand-picked favorites by our head chef</p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            { name: 'Spicy Fire Burger', price: '$12.99', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=60' },
-            { name: 'Truffle Pasta', price: '$18.50', img: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=500&q=60' },
-            { name: 'Sushi Platter', price: '$24.00', img: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=60' },
-          ].map((item, idx) => (
-            <motion.div 
-              key={idx}
-              whileHover={{ y: -10 }}
-              className="bg-darkCard rounded-2xl overflow-hidden shadow-lg border border-darkBorder group"
-            >
-              <div className="h-56 overflow-hidden">
-                <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-xl font-bold">{item.name}</h3>
-                  <span className="text-primaryOrange font-bold">{item.price}</span>
-                </div>
-                <Link to="/menu" className="block text-center w-full py-2.5 border border-primaryOrange text-primaryOrange hover:bg-primaryOrange hover:text-white rounded-lg transition font-semibold">
-                  Order Now
-                </Link>
-              </div>
-            </motion.div>
-          ))}
         </div>
       </section>
     </div>
