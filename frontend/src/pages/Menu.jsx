@@ -2,16 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import api from '../services/api';
 import { CartContext } from '../context/CartContext';
 import { motion, AnimatePresence } from 'framer-motion';
-const MOCK_FOODS = [
-  { _id: '1', name: 'Classic Burger', description: 'Beef patty, lettuce, tomato, special sauce.', price: 10.99, category: 'Burgers', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=60' },
-  { _id: '2', name: 'Double Cheese', description: 'Two juicy patties and melted cheddar.', price: 13.99, category: 'Burgers', image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=500&q=60' },
-  { _id: '3', name: 'Margherita Pizza', description: 'Fresh tomatoes, mozzarella, and basil.', price: 14.50, category: 'Pizza', image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=60' },
-  { _id: '4', name: 'Pepperoni Feast', description: 'Loaded with pepperoni and extra cheese.', price: 16.50, category: 'Pizza', image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=500&q=60' },
-  { _id: '5', name: 'Caesar Salad', description: 'Crisp romaine, parmesan, and croutons.', price: 8.00, category: 'Salads', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=60' },
-  { _id: '6', name: 'Truffle Pasta', description: 'Rich and creamy truffle mushroom linguine.', price: 18.50, category: 'Pasta', image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=500&q=60' },
-  { _id: '7', name: 'Spicy Arrabiata', description: 'Penne with a kick of garlic and chili.', price: 15.00, category: 'Pasta', image: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=500&q=60' },
-  { _id: '8', name: 'Iced Latte', description: 'Chilled espresso and milk over ice.', price: 4.50, category: 'Drinks', image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=500&q=60' },
-];
 
 const CATEGORIES = ['All', 'non veg'];
 
