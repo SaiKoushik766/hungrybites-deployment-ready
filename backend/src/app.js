@@ -11,7 +11,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'http://localhost:5173', // Frontend URL
+  origin: ['http://localhost:5173',
+    'https://hungrybites-deployment-ready-25bx.vercel.app'
+  ],
+  
   credentials: true, // Allow cookies to be sent
 }));
 app.use(cookieparser());
