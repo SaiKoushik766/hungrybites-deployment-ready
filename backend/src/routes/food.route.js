@@ -1,0 +1,10 @@
+const express = require('express');
+const foodrouter = express.Router();
+const foodcontroller = require('../controllers/food.controller');
+const upload = require('../middlewares/upload');
+foodrouter.post('/add', upload.single('image'), foodcontroller.createfood);
+foodrouter.get('/get', foodcontroller.getfood);
+foodrouter.get('/get/:id', foodcontroller.getfoodbyid);
+foodrouter.put('/update/:id', upload.single('image'), foodcontroller.updatefood);
+foodrouter.delete('/delete/:id', foodcontroller.deletefood);
+module.exports = foodrouter;
