@@ -4,7 +4,6 @@ const api = axios.create({
   baseURL: 'https://hungrybites-deployment-ready.onrender.com',
   withCredentials: true, // Include cookies in requests
 });
-
 // Add a request interceptor to include the auth token
 api.interceptors.request.use(
   (config) => {

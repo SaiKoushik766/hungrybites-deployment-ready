@@ -28,7 +28,7 @@ const Menu = () => {
         setFoods(res.data.foods);
       } catch (err) {
         console.warn("API failed `/foods`, using mock data instead.");
-        setFoods(MOCK_FOODS);
+        setFoods([]);
       } finally {
         setLoading(false);
       }
